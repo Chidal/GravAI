@@ -16,8 +16,6 @@ All delivered with Linera’s real-time performance, sub-second finality, and el
 
 With a degen-styled **Next.js + Tailwind** interface, GravAI converts raw on-chain activity into actionable alpha for AI + Crypto builders — enabling them to showcase investor-ready metrics (TVL growth, user traction, yield efficiency) and raise capital faster on the most scalable, real-time blockchain designed for agentic and high-throughput Web3 applications.
 
-🔴 **Live Demo:** [https://polygon-pulse.vercel.app/](https://polygon-pulse.vercel.app/)  
-*(Update the deployment URL in your repo when re-deployed on Linera)*
 
 ## The smart contract successfully built and deployed to the Mainnet. The contract is live at 0xd9aC52cCaD325f96398A06ADad409B30b3768d24
 *(Note: If redeploying to Linera mainnet, update this address accordingly)*
