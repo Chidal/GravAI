@@ -1,8 +1,10 @@
-# **Polygon Pulse**
+Here is the rewritten README with the project name changed to **GravAI** and all Polygon references replaced with **Linera** (a real-time Layer-1 blockchain using microchains for ultra-low latency, high scalability, parallel execution, and sub-second finality at virtually unlimited scale).
+
+# **GravAI**
 
 ## **Overview**
 
-**Polygon Pulse** is an AI-powered, real-time on-chain analytics and fundraising intelligence dashboard built natively on **Polygon PoS** & **zkEVM**.
+**GravAI** is an AI-powered, real-time on-chain analytics and fundraising intelligence dashboard built natively on **Linera**.
 
 It provides:
 
@@ -12,14 +14,16 @@ It provides:
 * Anomaly detection
 * VC-pattern matching insights
 
-All delivered with Polygon’s ultra-low fees and sub-second finality.
+All delivered with Linera’s real-time performance, sub-second finality, and elastic scalability via microchains.
 
-With a degen-styled **Next.js + Tailwind** interface, Polygon Pulse converts raw on-chain activity into actionable alpha for AI + Crypto builders — enabling them to showcase investor-ready metrics (TVL growth, user traction, yield efficiency) and raise capital faster on the most scalable, cost-efficient Ethereum L2.
+With a degen-styled **Next.js + Tailwind** interface, GravAI converts raw on-chain activity into actionable alpha for AI + Crypto builders — enabling them to showcase investor-ready metrics (TVL growth, user traction, yield efficiency) and raise capital faster on the most scalable, real-time blockchain designed for agentic and high-throughput Web3 applications.
 
-🔴 **Live Demo:** [https://polygon-pulse.vercel.app/](https://polygon-pulse.vercel.app/)
-
+🔴 **Live Demo:** [https://polygon-pulse.vercel.app/](https://polygon-pulse.vercel.app/)  
+*(Update the deployment URL in your repo when re-deployed on Linera)*
 
 ## The smart contract successfully built and deployed to the Mainnet. The contract is live at 0xd9aC52cCaD325f96398A06ADad409B30b3768d24
+*(Note: If redeploying to Linera mainnet, update this address accordingly)*
+
 ---
 
 ## **Features**
@@ -27,7 +31,7 @@ With a degen-styled **Next.js + Tailwind** interface, Polygon Pulse converts raw
 ### 🔥 Real-Time Feeds
 
 * Live transaction, swap, and yield event streaming
-* Powered by Polygon RPC + WebSockets
+* Powered by Linera RPC + native real-time notifications
 
 ### 🤖 AI Insights Panel
 
@@ -43,7 +47,7 @@ With a degen-styled **Next.js + Tailwind** interface, Polygon Pulse converts raw
 
 ### 💰 DeFi Yield Explorer
 
-* Track APYs and top strategies across Polygon protocols
+* Track APYs and top strategies across Linera protocols
 * Updated in real time
 
 ### 🕹 Gamified Elements
@@ -68,17 +72,16 @@ With a degen-styled **Next.js + Tailwind** interface, Polygon Pulse converts raw
 * **Tailwind CSS** – degen aesthetic
 * **Chart.js + Framer Motion** – smooth charts & animations
 
-### **Polygon Stack**
+### **Linera Stack**
 
-* Polygon **PoS & zkEVM**
-* Polygon **CDK-ready architecture** for custom chains
-* **Viem + Wagmi** for chain interaction
+* Linera **microchains** architecture for parallel, user-dedicated chains
+* **Viem + Wagmi** for chain interaction (with Linera provider support)
 * **RainbowKit** – plug-and-play wallet connect
-* **Ethers.js** – log parsing & ABI decoding
+* **Ethers.js** – log parsing & ABI decoding (adapt as needed for Linera SDK)
 
 ### **Real-Time & AI**
 
-* Polygon **WebSockets** + RPC polling fallback
+* Linera **native notifications** + RPC polling fallback
 * Lightweight **on-chain/off-chain AI models** for:
 
   * Summarization
@@ -89,17 +92,19 @@ With a degen-styled **Next.js + Tailwind** interface, Polygon Pulse converts raw
 ## **Getting Started**
 
 ```bash
-git clone https://github.com/yourteam/polygon-pulse.git
-cd polygon-pulse
+git clone https://github.com/yourteam/gravai.git
+cd gravai
 npm install
 
 cp .env.example .env.local
-# Add your Polygon RPC + WalletConnect Project ID
+# Add your Linera RPC URL / node endpoint + WalletConnect Project ID (or equivalent)
 
 npm run dev
 ```
 
-Open **[http://localhost:3000](http://localhost:3000)**, connect MetaMask to Polygon → **instant alpha**.
+Open **[http://localhost:3000](http://localhost:3000)**, connect your wallet to Linera → **instant alpha**.
+
+*(Note: Update repo name, env vars, and chain config for Linera integration — check Linera docs for client setup and microchain support.)*
 
 ---
 
@@ -116,15 +121,13 @@ Open **[http://localhost:3000](http://localhost:3000)**, connect MetaMask to Pol
 
 * On-chain prediction markets (“Beat the AI”) with prize pools
 * One-click copy-trading (“Mirror this whale”)
-* AggLayer-powered cross-chain analytics
+* Cross-microchain analytics leveraging Linera’s native messaging
 * SDK + CLI for builders
 * Tokenized *Insight NFTs* — trade premium dashboards & AI models
 
 ### 🌐 **Long-Term Vision**
 
-> Become the **Bloomberg Terminal + PitchBook for Polygon-native AI, DeFi, and Infra startups** — from launch to fully funded.
+> Become the **Bloomberg Terminal + PitchBook for Linera-native AI, DeFi, and Infra startups** — from launch to fully funded.
 
-Built **100% on Polygon**.
+Built **100% on Linera**.  
 The AI + Crypto revolution is here — **fund the future.**
-
----
