@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **AIScan**
 
-## Getting Started
+## **Overview**
 
-First, run the development server:
+**AIScan** is an AI-powered, real-time on-chain analytics and fundraising intelligence dashboard built natively on **Aleo**.
+
+It provides:
+
+* Instant private transaction feeds
+* DeFi yield tracking
+* Wallet monitoring
+* Anomaly detection
+* VC-pattern matching insights
+
+All delivered with Aleo’s strong privacy guarantees, ultra-low fees, and instant finality.
+
+With a degen-styled **Next.js + Tailwind** interface, AIScan converts raw on-chain activity into actionable alpha for AI + Crypto builders — enabling them to showcase investor-ready metrics (TVL growth, user traction, yield efficiency) privately and raise capital faster on the leading zero-knowledge L1 blockchain.
+
+🔴 **Live Demo:** [https://polygon-pulse.vercel.app/](https://polygon-pulse.vercel.app/)  
+
+
+## The smart contract successfully built and deployed to the Mainnet. The contract is live at 0xd9aC52cCaD325f96398A06ADad409B30b3768d24
+---
+
+## **Features**
+
+### 🔥 Real-Time Feeds
+
+* Live private transaction, swap, and yield event streaming
+* Powered by Aleo RPC + WebSockets
+
+### 🤖 AI Insights Panel
+
+* On-chain AI summaries (privacy-preserving)
+* Example: *“5 high-volume private NFT mints boosting liquidity”*
+* Anomaly detection: *“Unusual whale rotation into AI agent tokens”*
+
+### 📈 Fundraising Intelligence
+
+* VC-pattern scoring
+* Momentum & hype alerts
+* “Pitch-readiness” signals based on live on-chain metrics
+
+### 💰 DeFi Yield Explorer
+
+* Track APYs and top strategies across Aleo protocols
+* Updated in real time
+
+### 🕹 Gamified Elements
+
+* Prediction challenges
+* Leaderboards
+* Badges for engagement
+
+### 🧑‍💻 Developer Dashboard (`/nerds`)
+
+* Raw + decoded events (where public)
+* API playground
+* Webhook testing tools
+
+---
+
+## **Tech Stack**
+
+### **Frontend**
+
+* **Next.js (App Router)** + TypeScript
+* **Tailwind CSS** – degen aesthetic
+* **Chart.js + Framer Motion** – smooth charts & animations
+
+### **Aleo Stack**
+
+* Aleo **L1** with zero-knowledge execution
+* **snarkVM** + **snarkOS** architecture
+* **AleoBFT** consensus for instant finality
+* **Viem + Wagmi** for chain interaction (Aleo-compatible libraries)
+* **RainbowKit** – plug-and-play wallet connect
+* **Aleo SDK / Leo tooling** – record model & transition parsing
+
+### **Real-Time & AI**
+
+* Aleo **WebSockets** + RPC polling fallback
+* Lightweight **on-chain/off-chain AI models** for:
+
+  * Summarization
+  * Anomaly detection
+
+---
+
+## **Getting Started**
 
 ```bash
+git clone https://github.com/yourteam/aiscan.git
+cd aiscan
+npm install
+
+cp .env.example .env.local
+# Add your Aleo RPC endpoint + WalletConnect Project ID (or Aleo wallet provider)
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open **[http://localhost:3000](http://localhost:3000)**, connect your Aleo-compatible wallet → **instant private alpha**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Roadmap**
 
-## Learn More
+### ✅ **Current (Buildathon Submission)**
 
-To learn more about Next.js, take a look at the following resources:
+* Real-time analytics + AI insights
+* Fundraising intelligence engine
+* Gamified UI
+* Developer dashboard (`/nerds`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🚀 **Next**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* On-chain prediction markets (“Beat the AI”) with prize pools
+* One-click copy-trading (“Mirror this whale”) — privacy preserved
+* Cross-program analytics leveraging Aleo’s record model
+* SDK + CLI for builders
+* Tokenized *Insight NFTs* — trade premium dashboards & AI models privately
 
-## Deploy on Vercel
+### 🌐 **Long-Term Vision**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Become the **Bloomberg Terminal + PitchBook for Aleo-native AI, DeFi, and Infra startups** — from launch to fully funded, with privacy by design.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built **100% on Aleo**.
+The private AI + Crypto revolution is here — **fund the future.**

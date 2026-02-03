@@ -13,24 +13,25 @@ export default function CrossChainOverview() {
     const fetchTVL = async () => {
       try {
         const [posRes, zkRes] = await Promise.all([
-          fetch('https://api.llama.fi/protocol/polygon'), // Or direct chain endpoint
-          fetch('https://api.llama.fi/chain/Polygon%20zkEVM'),
+          fetch('https://api.llama.fi/tvl/Polygon'),
+          fetch('https://api.llama.fi/tvl/Polygon%20zkEVM'),
         ]);
 
-        if (!posRes.ok || !zkRes.ok) throw new Error('API error');
+        if (!posRes.ok || !zkRes.ok) {
+          throw new Error(`API error: ${posRes.status} / ${zkRes.status}`);
+        }
 
-        const posData = await posRes.json();
-        const zkData = await zkRes.json();
+        const posData = await posRes.json(); // number
+        const zkData = await zkRes.json();   // number
 
-        // DeFiLlama returns TVL in various formats; adjust based on actual response
-        setPosTVL(posData.tvl?.[posData.tvl.length - 1]?.totalLiquidityUSD || 1150000000);
-        setZkEvmTVL(zkData.tvl || 1800000);
+        setPosTVL(Number(posData));    // ensure number
+        setZkEvmTVL(Number(zkData));
       } catch (err) {
         console.error(err);
-        setError('Failed to load live data');
-        // Fallback to latest known values (Dec 18, 2025)
-        setPosTVL(1150000000);
-        setZkEvmTVL(1800000);
+        setError('Failed to load live TVL data');
+        // Fallbacks – update these periodically if needed
+        setPosTVL(1_180_000_000);   // ~$1.18B
+        setZkEvmTVL(1_800_000);     // ~$1.8M
       } finally {
         setIsLoading(false);
       }
@@ -39,7 +40,14 @@ export default function CrossChainOverview() {
     fetchTVL();
   }, []);
 
-  const totalTVL = posTVL && zkEvmTVL ? posTVL + zkEvmTVL : null;
+  const totalTVL =
+    posTVL !== null && zkEvmTVL !== null ? posTVL + zkEvmTVL : null;
+
+  const formatBillion = (value: number | null) =>
+    value != null ? `$${(value / 1e9).toFixed(2)}B` : '—.--B';
+
+  const formatMillion = (value: number | null) =>
+    value != null ? `$${(value / 1e6).toFixed(1)}M` : '—.--M';
 
   return (
     <motion.div
@@ -56,21 +64,21 @@ export default function CrossChainOverview() {
       {isLoading ? (
         <p className="text-gray-400 animate-pulse">Loading live TVL from DeFiLlama...</p>
       ) : error ? (
-        <p className="text-red-400">{error} (showing cached data)</p>
+        <p className="text-red-400">{error} (showing fallback data)</p>
       ) : (
         <div className="space-y-4">
           <div className="flex justify-between">
             <span className="text-gray-300">Polygon PoS TVL</span>
-            <span className="font-mono text-lg">${(posTVL / 1e9).toFixed(2)}B</span>
+            <span className="font-mono text-lg">{formatBillion(posTVL)}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-300">Polygon zkEVM TVL</span>
-            <span className="font-mono text-lg">${(zkEvmTVL / 1e6).toFixed(1)}M</span>
+            <span className="font-mono text-lg">{formatMillion(zkEvmTVL)}</span>
           </div>
           <div className="flex justify-between border-t border-gray-700 pt-4">
             <span className="text-xl text-cyan-300 font-bold">Unified Ecosystem TVL</span>
             <span className="font-mono text-2xl text-cyan-300">
-              ${totalTVL ? (totalTVL / 1e9).toFixed(2) : '—.--'}B
+              {formatBillion(totalTVL)}
             </span>
           </div>
         </div>

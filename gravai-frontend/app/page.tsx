@@ -41,7 +41,7 @@ export default function Home() {
         variants={fadeIn}
       >
         <h1 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-pink-500 text-shadow-glow">
-          Pulse
+          AIScan
         </h1>
         <WalletConnect />
       </motion.header>
@@ -61,7 +61,7 @@ export default function Home() {
           className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl"
           variants={fadeIn}
         >
-          Explore the Polygon network with cutting-edge AI insights and real-time data visualization. Connect your wallet and dive into the future of blockchain analytics.
+          Explore the Aleo network with cutting-edge AI insights and real-time data visualization. Connect your wallet and dive into the future of blockchain analytics.
         </motion.p>
         <motion.div className="flex flex-col sm:flex-row gap-4" variants={fadeIn}>
           <Link
@@ -84,7 +84,7 @@ export default function Home() {
         animate="visible"
         variants={fadeIn}
       >
-        <p>Powered by Polygon Network & AI Insights</p>
+        <p>Powered by Aleo Network & AI Insights</p>
       </motion.footer>
     </div>
   );

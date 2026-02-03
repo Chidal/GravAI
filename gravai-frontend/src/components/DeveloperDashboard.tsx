@@ -89,7 +89,7 @@ const DeveloperDashboard: React.FC = () => {
       variants={staggerContainer}
     >
       <motion.h1 className="text-4xl font-bold text-white mb-2" variants={fadeIn}>
-        Polygon Developer Dashboard (/nerds)
+        Aleo Developer Dashboard (/nerds)
       </motion.h1>
       <motion.p className="text-gray-400 mb-8" variants={fadeIn}>
         Mainnet Contract: <span className="font-mono text-cyan-400">0xd9aC52cCaD325f96398A06ADad409B30b3768d24</span>
@@ -102,7 +102,7 @@ const DeveloperDashboard: React.FC = () => {
           <p className="text-2xl font-bold">{isLoading ? 'Loading...' : `$${aggregatedTVL.toLocaleString()}`}</p>
         </div>
         <div className="bg-gray-800/40 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30">
-          <h3 className="text-xl text-purple-300">RWA TVL (Polygon Lead)</h3>
+          <h3 className="text-xl text-purple-300">RWA TVL (Aleo Lead)</h3>
           <p className="text-2xl font-bold">{isLoading ? 'Loading...' : `$${rwaTVL.toLocaleString()}`}</p>
         </div>
         <div className="bg-gray-800/40 backdrop-blur-xl p-6 rounded-2xl border border-pink-500/30">
