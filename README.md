@@ -1,5 +1,3 @@
-Here is the rewritten README with the project name changed to **GravAI** and all Polygon references replaced with **Linera** (a real-time Layer-1 blockchain using microchains for ultra-low latency, high scalability, parallel execution, and sub-second finality at virtually unlimited scale).
-
 # **GravAI**
 
 ## **Overview**
